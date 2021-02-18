@@ -49,8 +49,8 @@ input {
   font-size: 1.2em;
 }
 
-.nameContainer,
-.contactForm {
+.contactForm,
+.nameContainer {
   width: 50%;
   margin: 1rem;
   margin-left: 25%;
@@ -62,16 +62,30 @@ input {
 
 .image {
   margin-top: -5em;
-
   height: 200px;
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.listOfDrinks {
-  font-size: large;
-  color: red;
-  text-decoration: underline;
-  padding-left: 2%;
+.detailLink {
+  text-decoration: none;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid teal;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: 50%;
+  animation: spin 5s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
