@@ -2,12 +2,6 @@ const url = ("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 const nameContainer = document.querySelector (".container");
 
 
-// const queryString = document.location.search;
-// const params = new URLSearchParams(queryString);
-// const  id = params.get("id");
-
-// console.log(id)
-
 
 
 async function drinks(){
@@ -32,11 +26,12 @@ async function drinks(){
             const drinkType = drink[i].strCategory;
             const glassType = drink[i].strGlass;
             const images = drink[i].strDrinkThumb;
+            const id = drink[i].idDrink;
             
-            console.log(nameOfDrink)
+            console.log(id)
 
 
-        nameContainer.innerHTML += `<a href="details.html?id=${drinks.idDrink}" class="detailLink">
+        nameContainer.innerHTML += `<a href="details.html?id=${id}" class="detailLink">
                                         <div class="nameContainer">
                                             <p class="name">Drink name :  ${nameOfDrink}</p>
                                             <p class="type">Type of drink :  ${drinkType}</p>

@@ -6,13 +6,14 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const  id = params.get("idDrink");
 
-console.log(id)
 
-const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita" + id;
+const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
+const url2 = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?" + id;
+
 
 async function drinks (){
     try{
-        const response = await fetch(url);
+        const response = await fetch(url2);
         const json = await response.json();
 
         console.log(json);
@@ -21,18 +22,32 @@ async function drinks (){
 
         detailContainer.innerHTML = "";
 
-        
+        // createDetails(json)
+
+        detailContainer.innerHTML = `<h1 class=".header">${json.idDrink}</h1>
+    <div class="image" style="background-image: url ('${json.strDrinkThumb}')"></div>
+    <p> Type of drink : ${strCategory}</p>
+    <p> Glass : ${strGlass}</p>
+    <div>${strInstructions}</div>`
+
+
+
+
     } catch(error){
 
     }
 }
 
+
+
 drinks();
 
-function createDetails (){
-    detailContainer.innerHTML = `<h1>${idDrinks}</h1>
-    <div class="image" style="background-image: url ('${strDrinkThumb}')"></div>
-    <p> Type of drink : ${strCategory}</p>
-    <p> Glass : ${strGlass}</p>
-    <div>${strInstructions}</div>`
-}
+// function createDetails (json){
+//     detailContainer.innerHTML = `<h1>${json.idDrink}</h1>
+//     <div class="image" style="background-image: url ('${json.strDrinkThumb}')"></div>
+//     <p> Type of drink : ${strCategory}</p>
+//     <p> Glass : ${strGlass}</p>
+//     <div>${strInstructions}</div>`
+// }
+
+// createDetails();
