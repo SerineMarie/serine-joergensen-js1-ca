@@ -1,0 +1,23 @@
+.detailContainer {
+  background: lightgrey;
+  border: 1px solid gray;
+  width: 50%;
+  margin: 1rem;
+  margin-left: 20%;
+  border-radius: 1rem;
+  padding: 2%;
+}
+
+.paragraph {
+  font-size: large;
+  color: teal;
+}
+
+.img {
+  height: 350px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  margin-left: 500px;
+  margin-top: -300px;
+}

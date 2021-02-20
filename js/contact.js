@@ -36,7 +36,7 @@ function validation (event){
         emailError.style.display = "none";
     } else {
         emailError.style.display = "block";
-    }
+    } 
 }
 
 addEventListener("submit", validation)

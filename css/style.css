@@ -13,6 +13,8 @@ nav a,
   text-decoration: none;
   color: darkcyan;
   font-weight: bold;
+  font-size: 1.8rem;
+  margin: 2rem;
 }
 
 nav a:hover {
@@ -26,27 +28,9 @@ input {
   font-size: 10px;
 }
 
-.form-error,
-.validation {
-  display: none;
-  color: darkred;
-  font-weight: 600;
-}
-
-.name {
-  font-size: larger;
-  color: darkolivegreen;
-  text-decoration: underline;
-}
-
-.type,
-.glass {
+.type {
   font-size: large;
   color: teal;
-}
-
-.contactForm {
-  font-size: 1.2em;
 }
 
 .contactForm,
@@ -60,12 +44,23 @@ input {
   border-radius: 1rem;
 }
 
+.heading,
+.name {
+  color: rgb(11, 104, 104);
+  font-size: 1.7rem;
+}
+
 .image {
   margin-top: -5em;
   height: 200px;
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.error {
+  color: red;
+  font-size: 2em;
 }
 
 .detailLink {
@@ -81,6 +76,7 @@ input {
   margin-left: 50%;
   animation: spin 5s linear infinite;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

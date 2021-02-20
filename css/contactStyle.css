@@ -1,0 +1,10 @@
+.form-error,
+.validation {
+  display: none;
+  color: darkred;
+  font-weight: 600;
+}
+
+.contactForm {
+  font-size: 1.2em;
+}
